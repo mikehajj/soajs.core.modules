@@ -51,6 +51,6 @@
     "nodemailer-smtp-transport": "2.7.2",
     "object-hash": "1.1.5",
     "request": "2.84.0",
-    "soajs.core.libs": "1.2.0"
+    "soajs.core.libs": "git://github.com/mikehajj/soajs.core.libs.git"
   }
 }
