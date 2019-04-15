@@ -17,6 +17,11 @@ var provision = {
         models[modelName].init(dbConfig);
         provision.model = models[modelName];
     },
+	"closeDBConnection": () => {
+    	if(!process.env.SOAJS_SOLO || process.env.SOAJS_SOLO !== 'true'){
+    	    provision.model.closeDB();
+	    }
+	},
     "getAccessToken": function (bearerToken, cb) {
         return provision.model.getAccessToken(bearerToken, cb);
     },

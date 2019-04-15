@@ -33,6 +33,10 @@ module.exports = {
         mongo.createIndex(daemonGrpConfCollectionName, {daemonConfigGroup: 1, daemon: 1}, function (err, result) {
         });
     },
+    
+    "closeDB": () => {
+      mongo.closeDb();
+    },
 
     "getAccessToken": function (bearerToken, cb) {
         mongo.findOne(tokenCollectionName, {"token": bearerToken, "type": "accessToken"}, function (err, rec) {

@@ -251,6 +251,7 @@ var provision = {
                     provision.oauthModel.saveRefreshToken(rToken, clientId, rExpires, user, function(error){
                     	if(error){ return cb(error); }
                     	
+                    	core.provision.closeDBConnection();
                     	return cb(null, {
 		                    "token_type": "bearer",
 		                    "access_token": aToken,
