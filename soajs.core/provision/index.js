@@ -117,8 +117,7 @@ var provision = {
 			
 			let data = {
 				extKey: extKey,
-				locked: record.locked || false,
-				tenant: record
+				locked: record.locked || false
 			};
 			
 			return cb(null, data);
